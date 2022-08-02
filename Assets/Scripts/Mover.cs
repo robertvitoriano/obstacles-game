@@ -6,21 +6,9 @@ public class Mover : MonoBehaviour
 {
     public float moveSpeed = 10.0f;
 
-    void Start()
-    {
-      PrintInstructions();      
-    
-    }
-
     void Update()
     {
         MovePlayer();
-    }
-
-    void PrintInstructions(){
-        Debug.Log("Welcome to the game!");
-        Debug.Log("Use the arrows in order to move the player");
-        Debug.Log("Avoid the walls and obstacles");
     }
 
     void MovePlayer(){
