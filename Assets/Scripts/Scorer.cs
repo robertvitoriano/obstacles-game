@@ -5,6 +5,12 @@ using UnityEngine;
 public class Scorer : MonoBehaviour
 {
     [SerializeField] int score = 0;
+    Color originalColor;
+
+    void Start()
+    {
+        originalColor = GetComponent<Renderer>().material.color;
+    }
     private void OnCollisionEnter(Collision other) {
         score++;
         GetComponent<MeshRenderer>().material.color = Color.red;
@@ -15,8 +21,6 @@ public class Scorer : MonoBehaviour
     }
 
     private void OnCollisionExit(Collision other) {
-        Color color = new Color();
-        ColorUtility.TryParseHtmlString("#EEFD00", out color);
-        GetComponent<MeshRenderer>().material.color = color;
+        GetComponent<MeshRenderer>().material.color = originalColor;
     }
 }
