@@ -8,7 +8,8 @@ public class Mover : MonoBehaviour
 
     void Start()
     {
-        
+        PrintInstructions();
+    
     }
 
     void Update()
@@ -17,5 +18,11 @@ public class Mover : MonoBehaviour
         float zValue = Input.GetAxis("Vertical")* Time.deltaTime * moveSpeed;
 
         transform.Translate(xValue, 0.0f, zValue);
+    }
+
+    void PrintInstructions(){
+        Debug.Log("Welcome to the game!");
+        Debug.Log("Use the arrows in order to move the player");
+        Debug.Log("Avoid the walls and obstacles");
     }
 }
