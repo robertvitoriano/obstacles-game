@@ -8,7 +8,6 @@ public class ObjectHit : MonoBehaviour
 
     void Start(){
         renderer = GetComponent<MeshRenderer>();
-        originalColor = renderer.material.color;
     }
 
     private void OnCollisionEnter(Collision other) {
