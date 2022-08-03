@@ -11,10 +11,11 @@ public class ObjectHit : MonoBehaviour
         renderer = GetComponent<MeshRenderer>();
         originalColor = renderer.material.color;
     }
-    
+
     private void OnCollisionEnter(Collision other) {
         if(other.gameObject.tag == "Player"){
             renderer.material.color = Color.red;
+            gameObject.tag = "hit";
         }
     }
 
