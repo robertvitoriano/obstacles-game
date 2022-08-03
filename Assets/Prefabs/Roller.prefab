@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2186882048723337}
   - component: {fileID: 2186882048723338}
   - component: {fileID: -713706101422512163}
+  - component: {fileID: -6930360260611010260}
   - component: {fileID: 2620754578096493984}
   m_Layer: 0
   m_Name: Roller
@@ -111,6 +112,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2623b2a7e43a6de57a7514cee3ee1007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-6930360260611010260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2186882048723339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e121cc63498f0122aef9c6583e6de20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDrop: 2
 --- !u!54 &2620754578096493984
 Rigidbody:
   m_ObjectHideFlags: 0

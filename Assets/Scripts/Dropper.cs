@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Dropper : MonoBehaviour
 {
-    [SerializeField] float timeToDrop = 2.0f;
+    float timeToDrop;
     MeshRenderer renderer;
     Rigidbody rigidBody;
     
@@ -14,6 +14,7 @@ public class Dropper : MonoBehaviour
         rigidBody = GetComponent<Rigidbody>();
         renderer.enabled = false;
         rigidBody.useGravity = false;
+        timeToDrop = randomFloat(0f, 5.0f);
     }
 
     void Update()
@@ -27,5 +28,11 @@ public class Dropper : MonoBehaviour
             renderer.enabled = true;
             rigidBody.useGravity = true;
         }
+    }
+
+    float randomFloat (float min, float max){
+        System.Random random = new System.Random();
+        double val = (random.NextDouble() * (max - min) + min);
+        return (float)val;
     }
 }

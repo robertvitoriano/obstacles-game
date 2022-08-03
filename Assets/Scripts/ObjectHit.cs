@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ObjectHit : MonoBehaviour
 {
-     Color originalColor;
      MeshRenderer renderer;
 
     void Start(){
@@ -17,9 +16,5 @@ public class ObjectHit : MonoBehaviour
             renderer.material.color = Color.red;
             gameObject.tag = "hit";
         }
-    }
-
-    private void OnCollisionExit(Collision other) {
-        renderer.material.color = originalColor;
     }
 }
